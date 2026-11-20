@@ -1254,6 +1254,11 @@ dependencies = [
 ]
 
 [[package]]
+name = "craft-http-url"
+version = "0.1.0"
+source = "git+https://github.com/storytold/craft-libs?rev=512a1b8e8b59a7b325e7f69f6131aa8628470288#512a1b8e8b59a7b325e7f69f6131aa8628470288"
+
+[[package]]
 name = "craft-i18n"
 version = "0.1.0"
 source = "git+https://github.com/storytold/craft-libs?rev=23acc704933a9a5619a5cd1cddc9bb1fb5a9b2d3#23acc704933a9a5619a5cd1cddc9bb1fb5a9b2d3"
@@ -1510,6 +1515,16 @@ dependencies = [
  "quick-xml 0.41.0",
  "serde",
  "thiserror 2.0.21",
+]
+
+[[package]]
+name = "craft-zip"
+version = "0.1.0"
+source = "git+https://github.com/storytold/craft-libs?rev=4b4d5f7a9d126ff20d7c4a453726e43dc15c13cd#4b4d5f7a9d126ff20d7c4a453726e43dc15c13cd"
+dependencies = [
+ "flate2",
+ "thiserror 2.0.21",
+ "zip 9.1.3",
 ]
 
 [[package]]
@@ -4025,6 +4040,7 @@ dependencies = [
  "craft-plist",
  "craft-tiff 0.1.0 (git+https://github.com/storytold/craft-libs?rev=23acc704933a9a5619a5cd1cddc9bb1fb5a9b2d3)",
  "craft-tiff 0.1.0 (git+https://github.com/storytold/craft-libs?rev=f589ff485707007e814671229d0f4e77bc06968a)",
+ "craft-zip",
  "crc32fast",
  "fs4",
  "harfrust 0.13.3",
@@ -4081,6 +4097,7 @@ dependencies = [
 name = "lightcraft-fetch"
 version = "0.21.1"
 dependencies = [
+ "craft-http-url",
  "log",
  "rustls",
  "rustls-rustcrypto",
@@ -4099,7 +4116,7 @@ dependencies = [
 name = "lightcraft-geocode"
 version = "0.21.1"
 dependencies = [
- "miniz_oxide 0.9.1",
+ "craft-zip",
  "serde",
 ]
 
